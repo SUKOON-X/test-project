@@ -1,0 +1,19 @@
+
+app: 
+  name: trustmesh
+  environment: development
+  port: 8000
+database_config:
+  engine: postgresql
+  host: localhost
+  port: 5432
+agents:
+  - name: seller_agent
+    enabled_status: true
+    model_name: opus-4.5
+  - name: order_agent
+    enabled_status: false
+    model_name: haiku-4.0
+  - name: payment_agent
+    enabled_agent: true
+    model_name: sonnet-5.0
